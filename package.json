@@ -1,0 +1,26 @@
+{
+	"name": "mimiqueue",
+	"version": "1.0.0",
+	"author": "Joeri Bakker <bakkerjoeri@gmail.com>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git@github.com:bakkerjoeri/mimiqueue.git"
+	},
+	"main": "dist/PriorityQueue.js",
+	"types": "dist/PriorityQueue.d.ts",
+	"scripts": {
+		"build": "rm -rf dist && tsc",
+		"test": "jest",
+		"preversion": "npm run test",
+		"version": "npm run build && git add -A dist",
+		"postversion": "git push && git push --tags"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@types/jest": "^25.2.1",
+		"jest": "^25.4.0",
+		"ts-jest": "^25.4.0",
+		"typescript": "^3.8.3"
+	}
+}
