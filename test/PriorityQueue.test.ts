@@ -21,10 +21,11 @@ describe('PriorityQueue', () => {
 		queue.enqueue('a', 7);
 		queue.enqueue('b', 1);
 		queue.enqueue('c', 12);
-		expect(queue.length).toBe(3);
+		queue.enqueue('d', 7);
+		expect(queue.length).toBe(4);
 
 		queue.dequeue();
-		expect(queue.length).toBe(2);
+		expect(queue.length).toBe(3);
 	});
 
 	test('dequeue on an empty queue returns undefined', () => {
