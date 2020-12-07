@@ -16,12 +16,15 @@ export class PriorityQueue {
         return item[0];
     }
     peek() {
-        if (this.length === 0) {
+        if (this.isEmpty) {
             return;
         }
         return this.entries[0][0];
     }
     get length() {
         return this.entries.length;
+    }
+    get isEmpty() {
+        return this.length === 0;
     }
 }
